@@ -37,6 +37,19 @@ function purchaseClicked() {
 
 function removeCartItem(event) {
     var buttonClicked = event.target
+    let dd = prompt('Do you want to remove this item');
+    if (dd === '') {
+        return 0;
+    }
+    else if (dd === 'Yes') {
+        alert('Item will be removed');
+    }
+    else if (dd === 'No' || 'no') {
+        return 0;
+    }
+    else {
+        alert('Item will be removed');
+    }
     buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
 }
