@@ -1,4 +1,5 @@
-document.getElementById('bttn').onclick = function () {
+let users = [];
+document.getElementById('bttn').onclick = function (event) {
     let ds = document.getElementById('Name').value;
     if (ds == '') {
         alert('Please enter your name');
@@ -17,6 +18,17 @@ document.getElementById('bttn').onclick = function () {
     }
     if (ds !== '' && ds1 !== '' && ds2 !== '' && ds3 !== '') {
         alert('Submitted succesfully. We will get back to you within 24hrs.');
-        document.getElementById("formm").reset();
     }
+    event.preventDefault();
+    let user = {
+        id: Date.now(),
+        name: document.getElementById('Name').value,
+        email_id: document.getElementById('exampleInputEmail1').value,
+        query: document.getElementById('exampleInputPassword1').value,
+        query_explain: document.getElementById('exampleFormControlTextarea1').value
+    }
+    users.push(user);
+    document.getElementById("formm").reset();
+    console.log('added', { user });
+    localStorage.setItem('UserSubmission', JSON.stringify(users));
 };
