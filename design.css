@@ -59,6 +59,13 @@ html, body {
     padding-bottom: 30px;
 }
 
+#main-bdy{
+    background-image: url("images/bg_for_about_us.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
 .band-name {
     text-align: center;
     margin: 0;
@@ -81,12 +88,17 @@ html, body {
     margin:10px;
 }
 
+#cl{
+    color:rgb(0, 0, 0);
+    font-weight: 900;
+}
+
 .content-section {
     margin: 1em;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5em;
 }
