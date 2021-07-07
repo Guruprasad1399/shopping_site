@@ -1,4 +1,5 @@
 let users = [];
+// import { writeFile } from 'fs';
 document.getElementById('bttn').onclick = function (event) {
     let ds = document.getElementById('Name').value;
     if (ds == '') {
@@ -31,4 +32,10 @@ document.getElementById('bttn').onclick = function (event) {
     document.getElementById("formm").reset();
     console.log('added', { user });
     localStorage.setItem('UserSubmission', JSON.stringify(users));
+    // writeFile('userdata.json', JSON.stringify(users), function (err) {
+    //     if (err) {
+    //         throw err;
+    //     }
+    //     console.log('done');
+    // });
 };
