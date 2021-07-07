@@ -1,7 +1,13 @@
 document.getElementById('bttn').onclick = function () {
-    let a = prompt('Enter you mobile number');
-    if (a !== '') {
-        alert("You will be notified to" + " " + a);
+    while (true) {
+        let a = (prompt('Enter you mobile number'));
+        if (/^\d{10}$/.test(a)) {
+            alert('You will be notified' + " " + a);
+            break;
+        }
+        else {
+            alert('Please enter a valid number');
+        }
     }
 };
 
