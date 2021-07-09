@@ -30,7 +30,6 @@ document.getElementById('bttn').onclick = function (event) {
     if (user.id !== '' && user.name !== '' && user.email_id !== '' && user.query !== '' && user.query_explain !== '') {
         users.push(user);
         document.getElementById("formm").reset();
-        console.log('added', { user });
         localStorage.setItem('UserSubmission', JSON.stringify(users));
     }
     else {
