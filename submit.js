@@ -36,10 +36,4 @@ document.getElementById('bttn').onclick = function (event) {
     else {
         document.getElementById("formm").reset();
     }
-    // writeFile('userdata.json', JSON.stringify(users), function (err) {
-    //     if (err) {
-    //         throw err;
-    //     }
-    //     console.log('done');
-    // });
 };
